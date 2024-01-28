@@ -20,4 +20,6 @@ const formSchema = new mongoose.Schema({
   },
 });
 // eslint-disable-next-line no-undef
-module.exports = mongoose.model("Form", formSchema);
+const form = mongoose.model("Form", formSchema);
+
+export default form;
