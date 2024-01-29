@@ -25,7 +25,9 @@ const App = () => {
           <UtilityBar onButtonClick={addComponent} />
         </div>
       </div>
-      <div className="w-1/2 fixed">{components}</div>
+      <div className="flex justify-center">
+        <div className="w-1/2">{components}</div>
+      </div>
     </>
   );
 };
