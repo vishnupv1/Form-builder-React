@@ -1,9 +1,16 @@
 import TextField from "@mui/material/TextField";
-// import { useState } from "react";
+import { useState } from "react";
+import { Autosave, useAutosave } from "react-autosave";
+import axios from "axios";
 
+
+const autosaveForm = (data) =>
+  axios.post(`http://localhost:5000/saveForm`, { name: data });
 const width = "w-full";
+
 function Title() {
-  // const [TitleName, setTitleName] = useState("Title is here");
+  const [testForm, setTestForm] = useState("form Builder");
+  useAutosave({ data: testForm, onSave: autosaveForm });
   return (
     <div className=" bg-red-500 border-l-4 border-t-8 border-purple-800 border-l-blue-500 bg-white mt-2 rounded-lg">
       <div className="m-2 mb-4">
@@ -13,8 +20,8 @@ function Title() {
             label="Title"
             variant="filled"
             className={width}
-            // value={TitleName}
-            // onChange={(e) => setTitleName(e.target.value)}
+            value={testForm}
+            onChange={(e) => setTestForm(e.target.value)}
           />
         </div>
         <div className="flex flex-col">

@@ -4,5 +4,6 @@ const router = express.Router();
 
 router.get("/", formController.getForm);
 router.get("/getforms", formController.getForms);
+router.post("/saveForm", formController.saveForm);
 
 export default router;

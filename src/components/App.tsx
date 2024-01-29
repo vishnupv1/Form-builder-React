@@ -4,8 +4,6 @@ import Header from "./header";
 import NewForm from "./newForm";
 import { useState } from "react";
 
-
-
 const App = () => {
   const [components, setComponents] = useState<JSX.Element[]>([]);
 
@@ -16,12 +14,9 @@ const App = () => {
     ]);
   };
 
-  
-
   return (
     <>
       <Header />
-     
       <div className="flex w-full justify-center p-10">
         <div className="w-1/2 ">
           <Title />
