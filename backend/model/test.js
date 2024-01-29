@@ -5,8 +5,10 @@ const testSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  description: {
+    type: String,
+  },
 });
-
 
 // eslint-disable-next-line no-undef
 const test = mongoose.model("Test", testSchema);
