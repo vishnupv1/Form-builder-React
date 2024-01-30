@@ -1,31 +1,19 @@
 import { MenuItem, Select, SelectChangeEvent, TextField } from "@mui/material";
-import { useEffect, useState } from "react";
-import { formApi } from "../axiosApi/axiosApi.js";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import ArrowDropDownCircleIcon from "@mui/icons-material/ArrowDropDownCircle";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import ArrowDropDownCircleOutlinedIcon from '@mui/icons-material/ArrowDropDownCircleOutlined';
+import { useState } from "react";
 
 const width = "w-full";
 
 function NewForm() {
-  const [forms, setForms] = useState([]);
-  useEffect(() => {
-    const fetchForm = async () => {
-      try {
-        const res = await formApi.get(`/getforms`);
-        setForms(res.data);
-        console.log(res.data);
-      } catch (error) {
-        console.error("Error fetching forms:", error);
-      }
-    };
-    fetchForm();
-  }, []);
+
 
   const [field, setField] = useState<JSX.Element[]>([]);
   const checkOption = "Option 1"; //here i want to add the useState to change the option name dynamically
   const dropOption = "Option 1"; //here i want to add the useState to change the option name dynamically
+
   const addDropdownField = () => {
     setField([
       <div className="flex">
