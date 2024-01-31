@@ -14,7 +14,7 @@ const UtilityBar: React.FC<UtiliytyProps> = ({ onButtonClick }) => {
     <div className="h-full w-10 flex flex-col p-2 items-center justify-center bg-grey-400 rounded-lg shadow">
       <AddCircleOutlineIcon className="" onClick={onButtonClick} />
       <ExitToAppIcon />
-      <RadioButtonCheckedIcon />
+      {/* <RadioButtonCheckedIcon /> */}
       <TextFieldsIcon />
       <CropOriginalIcon />
       <SlideshowIcon />

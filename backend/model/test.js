@@ -8,6 +8,15 @@ const testSchema = new mongoose.Schema({
   description: {
     type: String,
   },
+  question: {
+    type: String,
+  },
+  drop: {
+    type: String,
+  },
+  check: {
+    type: String,
+  },
 });
 
 // eslint-disable-next-line no-undef

@@ -23,7 +23,6 @@ function Title() {
         const res = await formApi.get(`/getTitle`);
         SetTitleNew(res.data.title);
         SetDescription(res.data.description);
-        console.log(res.data);
         
       } catch (error) {
         console.error("Error fetching Title:", error);
